@@ -14,7 +14,7 @@ function App() {
 
     try {
       const { data } = await axios.post('http://localhost:4000/run', payload);
-      // console.log(data);
+      console.log(data);
       setOutput(data.output);
     } catch (error) {
       setOutput(error.response.data.error.stderr)
