@@ -20,10 +20,8 @@ const executeCpp = (filePath) => {
             `g++ ${filePath} -o ${outPath} && cd ${outputPath} && .\\${jobId}.exe`,
             (error, stdout, stderr) => {
                 if (error) {
-                    console.log("1");
                     reject({ error, stderr });
                 } if (stderr) {
-                    console.log("2");
                     reject({ stderr });
                 }
                 resolve(stdout);
